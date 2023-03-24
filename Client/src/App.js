@@ -11,9 +11,9 @@ function App() {
 
  
   // call on page load to provide models
-useEffect(() => {
-  getEngines();
-}, [])
+  useEffect(() => {
+    getEngines();
+    }, [])
  
   function getEngines() {
     fetch("https://chataiv2node.litzau.tk/models")
@@ -31,7 +31,7 @@ useEffect(() => {
   }
 
   // set inital chat log - 2Do add to array to be sent as message for history to API
-   const [currentModel, setCurrentModel] = useState("gpt-3.5-turbo"); //text-davinci-003, gpt-4-0314, gpt-4, gpt-3.5-turbo 
+  const [currentModel, setCurrentModel] = useState("gpt-3.5-turbo"); 
   const [chatLog, setChatLog] = useState([{
     user: "gpt",
     message: "Hello, How can I help you?"
